@@ -38,9 +38,9 @@ public class HttpSyncClient {
 
     private static Logger LOG = LoggerFactory.getLogger(HttpSyncClient.class);
 
-    private static int socketTimeout = 10000;// 设置等待数据超时时间0.5秒钟 根据业务调整
+    private static int socketTimeout = 50000;// 设置等待数据超时时间0.5秒钟 根据业务调整
 
-    private static int connectTimeout = 6000;// 连接超时
+    private static int connectTimeout = 50000;// 连接超时
 
     private static int poolSize = 100;// 连接池最大连接数
 

@@ -6,10 +6,14 @@
       <module fileurl="file://$PROJECT_DIR$/famous-battle/famous-battle.iml" filepath="$PROJECT_DIR$/famous-battle/famous-battle.iml" />
       <module fileurl="file://$PROJECT_DIR$/famous-cloud/famous-cloud.iml" filepath="$PROJECT_DIR$/famous-cloud/famous-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/famous-common/famous-common.iml" filepath="$PROJECT_DIR$/famous-common/famous-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/famous-config/famous-config.iml" filepath="$PROJECT_DIR$/famous-config/famous-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/famous-game/famous-game.iml" filepath="$PROJECT_DIR$/famous-game/famous-game.iml" />
       <module fileurl="file://$PROJECT_DIR$/famous-login/famous-login.iml" filepath="$PROJECT_DIR$/famous-login/famous-login.iml" />
       <module fileurl="file://$PROJECT_DIR$/famous-match/famous-match.iml" filepath="$PROJECT_DIR$/famous-match/famous-match.iml" />
+      <module fileurl="file://$PROJECT_DIR$/famous-monitor/famous-monitor.iml" filepath="$PROJECT_DIR$/famous-monitor/famous-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/famous-robot/famous-robot.iml" filepath="$PROJECT_DIR$/famous-robot/famous-robot.iml" />
       <module fileurl="file://$PROJECT_DIR$/famous-unique/famous-unique.iml" filepath="$PROJECT_DIR$/famous-unique/famous-unique.iml" />
+      <module fileurl="file://$PROJECT_DIR$/famous-zuul/famous-zuul.iml" filepath="$PROJECT_DIR$/famous-zuul/famous-zuul.iml" />
     </modules>
   </component>
 </project>

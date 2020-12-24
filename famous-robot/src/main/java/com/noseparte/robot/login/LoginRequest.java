@@ -26,10 +26,10 @@ public class LoginRequest extends RequestSync {
     }
 
     class LoginResponse implements ResponseCallBack<HttpResponse> {
-
         @Override
         public void completed(HttpResponse result) {
             JSONObject obj = getJSONObject(result);
+            log.debug(obj.toJSONString());
             int code = obj.getInteger("code");
             if (code == ErrorCode.SERVER_SUCCESS.value()) {
                 String data = obj.getString("data");

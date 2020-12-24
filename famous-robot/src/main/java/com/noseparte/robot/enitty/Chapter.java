@@ -16,7 +16,7 @@ import java.util.Map;
 @Accessors(chain = true)
 @NoArgsConstructor
 @Document(collection = "famous-game-chapter")
-public class Chapter extends GeneralBean implements Serializable {
+public class Chapter extends GeneralBean {
 
     private static final long serialVersionUID = 1L;
 

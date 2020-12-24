@@ -1,17 +1,23 @@
 package com.noseparte.robot.chapter.request;
 
 import com.alibaba.fastjson.JSONObject;
+import com.noseparte.common.bean.ChapterBean;
 import com.noseparte.common.exception.ErrorCode;
 import com.noseparte.common.global.ConfigManager;
 import com.noseparte.common.http.RequestSync;
 import com.noseparte.common.http.ResponseCallBack;
 import com.noseparte.common.resources.ChapterConf;
 import com.noseparte.common.utils.FastJsonUtils;
+import com.noseparte.common.utils.SpringContextUtils;
 import com.noseparte.robot.FamousRobotApplication;
+import com.noseparte.robot.Robot;
+import com.noseparte.robot.RobotMgr;
 import com.noseparte.robot.chapter.cmd.ProgressListCmd;
+import com.noseparte.robot.enitty.Chapter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpResponse;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -51,6 +57,14 @@ public class ProgressListRequest extends RequestSync {
                 }
                 // 章节列表
                 Map<Integer, ChapterConf> chapterConfMap = ConfigManager.chapterConfMap;
+                Map<Integer, ChapterBean> chapterMap = new HashMap<Integer, ChapterBean>();
+                RobotMgr robotMgr = SpringContextUtils.getBean("robotMgr", RobotMgr.class);
+                Robot robot = robotMgr.getRobotMap().get(rid);
+                Chapter chapter = new Chapter();
+                chapter.setRid(rid);
+                chapter.setChapters(chapterMap);
+                robot.setChapter(chapter);
+
 
             }
         }

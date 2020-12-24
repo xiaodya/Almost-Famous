@@ -21,8 +21,8 @@ import java.util.TimerTask;
  * <p>注册登录Robot 执行调度任务</p>
  */
 @Slf4j
-@ComponentScan({"com.noseparte.robot", "com.noseparte.common.*"})
 @SpringBootApplication
+@ComponentScan({"com.noseparte.robot", "com.noseparte.common.*"})
 public class FamousRobotApplication implements CommandLineRunner {
 
     @Resource
@@ -68,7 +68,7 @@ public class FamousRobotApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        threadCount = robotConfig.getRobotCount();
+        threadCount = robotConfig.getThreadCount();
         adminUrl = robotConfig.getAdminUrl();
         gameCoreUrl = robotConfig.getGameCoreUrl();
         robotCount = robotConfig.getRobotCount();

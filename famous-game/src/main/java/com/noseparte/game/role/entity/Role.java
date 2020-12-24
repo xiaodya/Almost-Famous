@@ -27,8 +27,8 @@ import java.io.Serializable;
 @Document(collection = "famous-game-role")
 public class Role extends GeneralBean {
 
-    @Id
-    @Field("_id")
+//    @Id
+//    @Field("_id")
     private Long uid;
 
     /**

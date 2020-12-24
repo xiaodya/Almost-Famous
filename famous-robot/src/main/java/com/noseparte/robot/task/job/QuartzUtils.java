@@ -3,6 +3,7 @@ package com.noseparte.robot.task.job;
 import com.noseparte.robot.task.bean.ScheduledEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
@@ -17,9 +18,9 @@ import java.util.Date;
 @Slf4j
 @Service
 public class QuartzUtils {
-
+    //两种注解等同 @Autowired+@Qualifier == @Resource 先byName没有在byType
+//    @Autowired @Qualifier("scheduler")
     @Resource
-    @Qualifier("scheduler")
     private Scheduler scheduler;
 
     /**

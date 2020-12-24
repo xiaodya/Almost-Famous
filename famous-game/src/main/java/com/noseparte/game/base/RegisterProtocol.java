@@ -2,7 +2,19 @@ package com.noseparte.game.base;
 
 import com.noseparte.common.bean.Action;
 import com.noseparte.common.utils.SpringContextUtils;
+import com.noseparte.game.card.controller.CardListAction;
+import com.noseparte.game.chapter.controller.ChapterChallengeAction;
+import com.noseparte.game.chapter.controller.ChapterChallengeOverAction;
+import com.noseparte.game.chapter.controller.ChapterProgressListAction;
+import com.noseparte.game.mission.controller.MissionActorListAction;
+import com.noseparte.game.mission.controller.MissionFinishAction;
+import com.noseparte.game.pack.controller.CardBagBuyAction;
+import com.noseparte.game.pack.controller.CardBagListAction;
+import com.noseparte.game.pack.controller.CardBagSelectAction;
 import com.noseparte.game.role.controller.*;
+import com.noseparte.game.school.controller.SchoolListAction;
+import com.noseparte.game.sign.controller.SignInAction;
+import com.noseparte.game.sign.controller.SignRewardListAction;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -94,6 +106,10 @@ public class RegisterProtocol {
 
     public static final int CHAPTER_CHALLENGE_OVER_REQ = 605;
     public static final int CHAPTER_CHALLENGE_OVER_RESP = 606;
+
+    public static final int CHAPTER_PROGRESS_REQ = 607;
+    public static final int CHAPTER_PROGRESS_RESP = 608;
+
     ///////////////////////任务指引//////////////////////////
     public static final int MISSION_ACTOR_LIST_REQ = 701;
     public static final int MISSION_ACTOR_LIST_RESP = 702;
@@ -122,6 +138,18 @@ public class RegisterProtocol {
             put(ROLE_ATTR_ACTION_REQ, SpringContextUtils.getBean("roleAttrAction", RoleAttrAction.class));
             put(ROLE_BATTLE_RANK_ACTION_REQ, SpringContextUtils.getBean("roleBattleRankAction", RoleBattleRankAction.class));
             put(ROLE_CURRENCY_CHANGE_ACTION_REQ, SpringContextUtils.getBean("roleCurrencyChangeAction", RoleCurrencyChangeAction.class));
+            put(MISSION_ACTOR_LIST_REQ, SpringContextUtils.getBean("missionActorListAction", MissionActorListAction.class));
+            put(MISSION_FINISH_ACTION_REQ, SpringContextUtils.getBean("missionFinishAction", MissionFinishAction.class));
+            put(SCHOOL_LIST_REQ, SpringContextUtils.getBean("schoolListAction", SchoolListAction.class));
+            put(CARD_LIST_ACTION_REQ, SpringContextUtils.getBean("cardListAction", CardListAction.class));
+            put(CARD_BAG_LIST_REQ, SpringContextUtils.getBean("cardBagListAction", CardBagListAction.class));
+            put(CARD_BAG_BUY_ACTION_REQ, SpringContextUtils.getBean("cardBagBuyAction", CardBagBuyAction.class));
+            put(SIGN_REWARD_LIST_REQ, SpringContextUtils.getBean("signRewardListAction", SignRewardListAction.class));
+            put(CHAPTER_PROGRESS_LIST_REQ, SpringContextUtils.getBean("chapterProgressListAction", ChapterProgressListAction.class));
+            put(CHAPTER_CHALLENGE_REQ, SpringContextUtils.getBean("chapterChallengeAction", ChapterChallengeAction.class));
+            put(CHAPTER_CHALLENGE_OVER_REQ, SpringContextUtils.getBean("chapterChallengeOverAction", ChapterChallengeOverAction.class));
+            put(SIGN_IN_ACTION_REQ, SpringContextUtils.getBean("signInAction", SignInAction.class));
+            put(CARD_BAG_SELECT_ACTION_REQ, SpringContextUtils.getBean("cardBagSelectAction", CardBagSelectAction.class));
 
         }
     };

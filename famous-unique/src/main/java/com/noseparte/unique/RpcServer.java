@@ -24,7 +24,7 @@ public class RpcServer {
 
     private Server server;
 
-    private int port = ConfigManager.getIntegerValue("unique", "gRpc_port");
+    private int port = ConfigManager.getIntegerValue("unique", "grpc_port");
 
     private void start() throws IOException {
         server = ServerBuilder.forPort(port)

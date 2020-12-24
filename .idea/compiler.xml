@@ -2,17 +2,22 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="famous-common" />
-        <module name="famous-match" />
-        <module name="famous-unique" />
-        <module name="famous-cloud" />
         <module name="famous-login" />
         <module name="famous-battle" />
+        <module name="famous-robot" />
+        <module name="famous-cloud" />
+        <module name="famous-zuul" />
+        <module name="famous-config" />
+        <module name="famous-unique" />
+        <module name="famous-common" />
+        <module name="famous-monitor" />
         <module name="famous-game" />
+        <module name="famous-match" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,10 +25,14 @@
       <module name="famous-battle" target="1.8" />
       <module name="famous-cloud" target="1.8" />
       <module name="famous-common" target="1.8" />
+      <module name="famous-config" target="1.8" />
       <module name="famous-game" target="1.8" />
       <module name="famous-login" target="1.8" />
       <module name="famous-match" target="1.8" />
+      <module name="famous-monitor" target="1.8" />
+      <module name="famous-robot" target="1.8" />
       <module name="famous-unique" target="1.8" />
+      <module name="famous-zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -31,10 +40,14 @@
       <module name="famous-battle" options="-parameters" />
       <module name="famous-cloud" options="-parameters" />
       <module name="famous-common" options="-parameters" />
+      <module name="famous-config" options="-parameters" />
       <module name="famous-game" options="-parameters" />
       <module name="famous-login" options="-parameters" />
       <module name="famous-match" options="-parameters" />
+      <module name="famous-monitor" options="-parameters" />
+      <module name="famous-robot" options="-parameters" />
       <module name="famous-unique" options="-parameters" />
+      <module name="famous-zuul" options="-parameters" />
     </option>
   </component>
 </project>

@@ -43,7 +43,7 @@ public class BattleServer {
                 future.channel().closeFuture().sync();
             } catch (InterruptedException e) {
                 log.error("[出现异常] 释放资源", e);
-            }finally {
+            } finally {
                 boss.shutdownGracefully();
                 work.shutdownGracefully();
             }

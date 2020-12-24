@@ -17,11 +17,11 @@ import java.util.Map;
 public class RegisterProtocol {
 
     ////////// 玩家注册登录
-    public final static int ACTOR_LOGIN_ACTION_REQ = 101;
-    public final static int ACTOR_LOGIN_ACTION_RESP = 102;
+    public final static int ACTOR_LOGIN_ACTION_REQ = 301;
+    public final static int ACTOR_LOGIN_ACTION_RESP = 302;
 
-    public final static int ACTOR_REGISTER_ACTION_REQ = 103;
-    public final static int ACTOR_REGISTER_ACTION_RESP = 104;
+    public final static int ACTOR_REGISTER_ACTION_REQ = 303;
+    public final static int ACTOR_REGISTER_ACTION_RESP = 304;
 
     public static final int REFRESH_TOKEN_ACTION_REQ = 331;
     public static final int REFRESH_TOKEN_ACTION_RESP = 332;

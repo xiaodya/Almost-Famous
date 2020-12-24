@@ -14,7 +14,7 @@ match:
   port: 9872
 
   threadCount: 10
-  adminUrl: http://localhost:8808/login/dispatch/a
+  adminUrl: http://localhost:8809/login/dispatch/a
   verifyUserLoginCmd: 20001
   gameCoreUrl: http://localhost:8909/game/dispatch/a
   pullActorCmd: 20003

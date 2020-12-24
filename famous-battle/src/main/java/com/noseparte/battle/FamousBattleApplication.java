@@ -3,6 +3,7 @@ package com.noseparte.battle;
 import LockstepProto.NetMessage;
 import com.noseparte.battle.battle.*;
 import com.noseparte.battle.server.BattleServer;
+import com.noseparte.battle.utils.SchedulerConfig;
 import com.noseparte.common.battle.BattleService;
 import com.noseparte.common.battle.server.CHeartBeat;
 import com.noseparte.common.battle.server.RegistryProtocol;
@@ -70,7 +71,7 @@ public class FamousBattleApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(FamousBattleApplication.class);
-//        application.addListeners(new SchedulerConfig());
+        application.addListeners(new SchedulerConfig());
         application.setWebApplicationType(WebApplicationType.NONE);
         application.run(args);
     }

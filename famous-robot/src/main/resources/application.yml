@@ -1,23 +1,23 @@
 #logging.level.org.springframework.boot.autoconfigure: ERROR
 # Tomcat
-server:
-  tomcat:
-    uri-encoding: UTF-8
-    max-threads: 1000
-    min-spare-threads: 30
-  port: 8909
-  compression:
-    enabled: false
-    min-response-size: 1
-    mime-types: application/json
-  servlet:
-    context-path: /game
+#server:
+#  tomcat:
+#    uri-encoding: UTF-8
+#    max-threads: 1000
+#    min-spare-threads: 30
+#  port: 8909
+#  compression:
+#    enabled: false
+#    min-response-size: 1
+#    mime-types: application/json
+#  servlet:
+#    context-path: /game
 
 spring:
   application:
     name: famous-robot
   profiles:
-    active: dev
+#    active: dev
     jackson:
       date-format: yyyy-MM-dd HH:mm:ss
       time-zone: GMT+8
@@ -27,6 +27,22 @@ spring:
         max-request-size: 100MB
         enabled: true
 
+robot:
+  threadCount: 10
+  gameCoreUrl: http://localhost:8909/game/dispatch/a
+  adminUrl: http://localhost:8809/login/dispatch/a
+  robotCount: 1
+  robotType: 1
+  robotIndex: 2
+  accountPre: xiaodya
+#  robotModel: single
+  robotModel: cluster
+
+#RPC
+rpc:
+  host: localhost
+  port: 9999
+  rpc-type: Thrift
 
 #redisson
 redis:

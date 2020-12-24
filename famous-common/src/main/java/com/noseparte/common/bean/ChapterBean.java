@@ -2,6 +2,7 @@ package com.noseparte.common.bean;
 
 import lombok.Data;
 
+
 @Data
 public class ChapterBean implements Comparable<ChapterBean> {
 

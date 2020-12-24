@@ -1,0 +1,12 @@
+.idea/
+famous-battle/target/
+famous-cloud/target/
+famous-common/target/
+famous-config/target/
+famous-game/target/
+famous-login/target/
+famous-match/target/
+famous-monitor/target/
+famous-unique/target/
+famous-zuul/target/
+log/

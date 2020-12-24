@@ -23,7 +23,7 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-@ChannelHandler.Sharable
+@ChannelHandler.Sharable //TODO Handler 当做单例使用，在Initial里面需要当做成员变量先new出来，在传入pipline，在read0里面就是同一个实例对象了
 public class MatchServerHandler extends SimpleChannelInboundHandler<Protocol> {
 
     @Override

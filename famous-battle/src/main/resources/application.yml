@@ -8,12 +8,13 @@ spring:
       config: classpath:redisson.yaml
 
 battle:
+  serverId: 1
   host: localhost
   port: 9981
 
   threadCount: 10
 
-  adminUrl: http://localhost:8808/login/dispatch/a
+  adminUrl: http://localhost:8809/login/dispatch/a
   verifyUserLoginCmd: 20001
   gameCoreUrl: http://localhost:8909/game/dispatch/a
   pullActorCmd: 20003

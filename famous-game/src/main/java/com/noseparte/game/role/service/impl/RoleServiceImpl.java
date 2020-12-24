@@ -166,6 +166,7 @@ public class RoleServiceImpl implements RoleService {
             log.error("ExecutionException, {}", e.getMessage());
             e.printStackTrace();
         } catch (Exception e) {
+            //TODO error do something
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();//关键
         }
         return false;

@@ -35,9 +35,9 @@ import java.nio.charset.CodingErrorAction;
 public class HttpAsyncClient {
     private static Logger LOG = LoggerFactory.getLogger(HttpAsyncClient.class);
 
-    private static int socketTimeout = 500;// 设置等待数据超时时间0.5秒钟 根据业务调整
+    private static int socketTimeout = 180000;// 设置等待数据超时时间0.5秒钟 根据业务调整
 
-    private static int connectTimeout = 2000;// 连接超时
+    private static int connectTimeout = 180000;// 连接超时
 
     private static int poolSize = 100;// 连接池最大连接数
 

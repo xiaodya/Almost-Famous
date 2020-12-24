@@ -5,10 +5,10 @@ server:
   port:
 eureka:
   instance:
-    #ip×¢²á
+    #ipæ³¨å†Œ
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
-    #·şÎñµØÖ·1
+    #æœåŠ¡åœ°å€1
     hostname: ${spring.cloud.client.ip-address}
   client:
     serviceUrl:

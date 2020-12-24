@@ -7,6 +7,8 @@ import com.noseparte.robot.bag.BagListRequest;
 import com.noseparte.robot.cardpackage.CardListCmd;
 import com.noseparte.robot.cardpackage.CardListRequest;
 import com.noseparte.robot.chapter.cmd.ProgressCmd;
+import com.noseparte.robot.chapter.cmd.ProgressListCmd;
+import com.noseparte.robot.chapter.request.ProgressListRequest;
 import com.noseparte.robot.chapter.request.ProgressRequest;
 import com.noseparte.robot.enitty.*;
 import com.noseparte.robot.mission.ActorListCmd;
@@ -154,6 +156,11 @@ public class Robot implements Runnable {
             cardListCmd.setRid(rid);
             new CardListRequest(cardListCmd).execute();
             // 关卡
+            ProgressListCmd progressListCmd = new ProgressListCmd();
+            progressListCmd.setCmd(RegisterProtocol.CHAPTER_PROGRESS_LIST_REQ);
+            progressListCmd.setRid(rid);
+            new ProgressListRequest(progressListCmd).execute();
+
             ProgressCmd progressCmd = new ProgressCmd();
             progressCmd.setCmd(RegisterProtocol.CHAPTER_PROGRESS_REQ);
             progressCmd.setRid(rid);
