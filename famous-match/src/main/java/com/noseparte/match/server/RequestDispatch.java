@@ -7,9 +7,10 @@ import org.slf4j.LoggerFactory;
 
 public class RequestDispatch {
 
-    protected static Logger LOG = LoggerFactory.getLogger("Battle");
+    protected static Logger LOG = LoggerFactory.getLogger(RequestDispatch.class);
 
     public static void dispatch(Protocol protocol, int sid) {
+        LOG.info("dispatch---------------"+sid);
         try {
             FamousMatchApplication.pool.execute(protocol, sid);
         } catch (Exception e){

@@ -3,11 +3,9 @@ package com.noseparte.match.client;
 import LockstepProto.C2SHeartBeat;
 import LockstepProto.C2SMatch;
 import LockstepProto.NetMessage;
-import com.noseparte.common.battle.server.CHeartBeat;
-import com.noseparte.common.battle.server.Decoder;
-import com.noseparte.common.battle.server.Encoder;
-import com.noseparte.common.battle.server.Protocol;
-import com.noseparte.match.match.CMatch;
+import com.noseparte.common.battle.server.*;
+import com.noseparte.match.FamousMatchApplication;
+import com.noseparte.match.match.*;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -21,7 +19,7 @@ import java.util.TimerTask;
 
 public class Connect {
 
-    protected static Logger LOG = LoggerFactory.getLogger("Battle");
+    protected static Logger LOG = LoggerFactory.getLogger(Connect.class);
 
     private Channel channel;
 
@@ -53,19 +51,20 @@ public class Connect {
         return channel;
     }
 
+
     public static void main(String[] args) throws InterruptedException {
-        Channel channel = new Connect().connect("localhost", 9876);
+        Channel channel = new Connect().connect("localhost", 9872);
         if (null == channel || !channel.isOpen()) {
             return;
         }
-
+        FamousMatchApplication.init();
         // test com.liema.match.match
-        byte[] resmsg = C2SMatch.newBuilder().setUserId(69111044030599168L).setRoleId(69111181259837440L)
-                .setToken("33313209179750712:Y0D6NjkxMTEwNDQwMzA1OTkxNjg=0ID").build().toByteArray();
-        Protocol p = new CMatch();
-        p.setType(NetMessage.C2S_Match_VALUE);
-        p.setMsg(resmsg);
-        channel.writeAndFlush(p);
+//        byte[] resmsg = C2SMatch.newBuilder().setUserId(69111044030599168L).setRoleId(69111181259837440L)
+//                .setToken("33313209179750712:Y0D6NjkxMTEwNDQwMzA1OTkxNjg=0ID").build().toByteArray();
+//        Protocol p = new CMatch();
+//        p.setType(NetMessage.C2S_Match_VALUE);
+//        p.setMsg(resmsg);
+//        channel.writeAndFlush(p);
 
         // test ready
 /*
@@ -106,8 +105,8 @@ public class Connect {
         };
 
         Timer schedule = new Timer("Send To");
-        schedule.schedule(task, 0, 30000);
-        schedule.cancel();
+        schedule.schedule(task, 0, 3000);
+//        schedule.cancel();
 
     }
 }

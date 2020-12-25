@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 
 public class ClientHandler extends io.netty.channel.SimpleChannelInboundHandler<Protocol> {
 
-    protected static Logger LOG = LoggerFactory.getLogger("Battle");
+    protected static Logger LOG = LoggerFactory.getLogger(ClientHandler.class);
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Protocol msg) throws Exception {

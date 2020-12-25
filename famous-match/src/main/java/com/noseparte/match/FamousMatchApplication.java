@@ -150,6 +150,8 @@ public class FamousMatchApplication implements CommandLineRunner {
         return this.battleServices.first();
     }
 
-
+    public static void init(){
+        pool = new ThreadPool(10, "client test thread pool");
+    }
 
 }

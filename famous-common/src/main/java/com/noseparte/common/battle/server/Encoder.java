@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 
 public class Encoder extends io.netty.handler.codec.MessageToByteEncoder<Protocol> {
 
-    protected static Logger LOG = LoggerFactory.getLogger("Battle");
+    protected static Logger LOG = LoggerFactory.getLogger(Encoder.class);
 
     @Override
     protected void encode(ChannelHandlerContext ctx, Protocol msg, ByteBuf out) {

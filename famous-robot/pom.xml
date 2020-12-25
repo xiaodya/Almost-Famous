@@ -70,7 +70,16 @@
             <groupId>com.noseparte</groupId>
             <artifactId>famous-common</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.noseparte</groupId>
+            <artifactId>famous-match</artifactId>
+            <version>1.0.0-Release</version>
+        </dependency>
+        <dependency>
+            <groupId>com.noseparte</groupId>
+            <artifactId>famous-battle</artifactId>
+            <version>1.0.0-Release</version>
+        </dependency>
     </dependencies>
 
     <build>

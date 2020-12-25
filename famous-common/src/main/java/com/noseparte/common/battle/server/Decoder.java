@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Decoder extends io.netty.handler.codec.ByteToMessageDecoder {
 
-    protected static Logger LOG = LoggerFactory.getLogger("Battle");
+    protected static Logger LOG = LoggerFactory.getLogger(Decoder.class);
 
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) {
